@@ -1,0 +1,37 @@
+.Main
+  .Main__left
+
+  .Main__screen
+    .Top
+      .Top__logo
+
+    .Game-area
+      .Game-area__time
+        %p
+          残り 
+        %p#timer
+          60
+        %p
+          秒
+      .Game-area__contents
+        %p#question
+          問題文がここにきます
+        %p#answer
+          答えの文がここにきます
+        %p#target
+          タイピングする文がここにきます
+      
+      #Cover
+        %p
+          press the space key to start  
+      
+      -# %canvas#maincanvas(width="360" height="200")
+      -#   このブラウザは HTML5 Canvas に対応していません。
+
+  
+      
+      
+  .Main__right
+    = content_tag :div, "", id: "questions", data: { questions: @questions }
+    = content_tag :div, "", id: "answers", data: { answers: @answers }
+    = content_tag :div, "", id: "targets", data: { targets: @targets }

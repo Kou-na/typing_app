@@ -1,5 +1,11 @@
 class WordsController < ApplicationController
 
+  def game
+    @questions = current_user.words.select(:question).pluck(:question)
+    @answers = current_user.words.select(:answer).pluck(:answer)
+    @targets = current_user.words.select(:target).pluck(:target)
+  end
+
   def new
     @word = Word.new
   end

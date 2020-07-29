@@ -14,7 +14,7 @@
           %li
             = link_to(current_user.name, edit_user_path(current_user))
           %li
-            = link_to('ゲームへ！', "static_pages_about_path(current_user.id)")
+            = link_to('ゲームへ！', game_path(current_user.id))
           %li
             = link_to('文字の登録', new_word_path)
           %li
