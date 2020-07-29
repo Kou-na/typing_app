@@ -1,0 +1,27 @@
+.Main
+  .Main__left
+
+  .Main__screen
+    .Table
+      %table
+        %thead
+          %tr
+            %th
+              質問
+            %th
+              答え
+            %th
+              打つ文字
+      %table
+        %tbody
+          - @words.each do |word|
+            %tr
+              %td
+                = link_to word.question, edit_word_path(word.id)
+              %td
+                = link_to word.answer, edit_word_path(word.id)
+              %td
+                = link_to word.target, edit_word_path(word.id)
+
+  .Main__right
+    %br

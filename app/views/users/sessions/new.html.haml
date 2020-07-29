@@ -1,0 +1,29 @@
+.Account
+  .Account__left
+  .Account__screen
+    %h2
+      ログイン
+    
+    .Form
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .Form__field
+          = f.label "名前"
+          %br
+          = f.text_field :name, autofocus: true, autocomplete: "name"
+
+        .Form__field
+          = f.label "メールアドレス"
+          %br
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+
+        .Form__field
+          = f.label "パスワード"
+          %br
+          = f.password_field :password, autocomplete: "current-password"
+
+        .Form__action
+          = f.submit "ログイン"
+
+      -# = render "users/shared/links"
+
+  .Account__right

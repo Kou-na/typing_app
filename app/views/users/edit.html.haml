@@ -1,0 +1,34 @@
+.Account
+  .Account__left
+  .Account__screen
+    %h2
+      ユーザー情報編集
+
+    .Form
+      = form_with url: user_path, method: :patch, local: true do |f|
+        -# = render "users/shared/error_messages"
+
+        .Form__field
+          = f.label "名前"
+          %br
+          = f.text_field :name, autofocus: true, autocomplete: "name", value: current_user.name
+
+          .Form__field
+            = f.label "メールアドレス"
+            %br
+            = f.email_field :email, autofocus: true, autocomplete: "email", value: current_user.email
+
+          .Form__field
+            = f.label "パスワード"
+            %br
+            = f.password_field :password, autocomplete: "new-password"
+
+          .Form__field
+            = f.label "パスワード（確認用）"
+            %br
+            = f.password_field :password_confirmation, autocomplete: "new-password"
+
+          .Form__action
+            = f.submit "更新する"
+
+  .Account__right
