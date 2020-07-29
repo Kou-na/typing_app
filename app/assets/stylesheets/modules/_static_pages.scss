@@ -1,0 +1,49 @@
+.Static-area {
+  font-family: 'Comic Sans MS', cursive, '游ゴシック';
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__logo {
+    margin: 0 auto;
+    width: 120px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Main-title {
+    font-size: 100px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px dotted red;
+  }
+}
+
+.Ball {
+  background-color: lightgreen;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+
+  animation-duration: 5s;
+  animation-name: rollin;
+  animation-iteration-count: infinite;
+  animation-iteration-count: inherit;
+}
+
+@keyframes rollin {
+  from {
+    margin-left: 80%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}

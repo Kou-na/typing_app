@@ -1,0 +1,189 @@
+.Main {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  &__left {
+    width: calc((100vw - 900px) / 2);
+    background-color: #fff3b8;
+  }
+  &__screen {
+    background-color: #000;
+    border-right: 4px solid #fff;
+    border-left: 4px solid #fff;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__right {
+    width: calc((100vw - 900px) / 2);
+    background-color: #fff3b8;
+  }
+}
+
+.Game-area {
+  background-color: #bbe2f1;
+  border-radius: 5px;
+  width: 800px;
+  height: 500px;
+
+  &__title {
+    height: 95px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &--btn {
+      border-radius: 5px;
+      margin: 0 40px;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  &__time {
+    padding: 10px 0 0 20px;
+    display: flex;
+  }
+
+  &__contents {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 380px;
+    margin: 20px auto;
+    padding: 5px 0;
+    text-align: center;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    
+    h1 {
+      padding: 5px;
+      font-size: 25px;
+    }
+  }
+
+  & p {
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.Table {
+  background-color: pink;
+  border-right: none;
+  border-left: none;
+  width: 900px;
+}
+
+table {
+  background-color: white;
+  border: black;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 900px;
+  height: 573px;
+  thead {
+    background-color: lightskyblue;
+    width: calc(100% / 3);
+    padding: 20px;
+  }
+  tbody {
+    display: block;
+    overflow-y: scroll;
+    height: 550px;
+  }
+  tr {
+    border: 1px solid black;
+  }
+  th, td {
+    width: calc(100% / 3);
+    padding: 20px;
+  }
+}
+
+
+#Cover {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  border: 2px dotted #ea5550;
+  margin: 0 auto;
+  background-color: #fff3b8;
+  z-index: 10;
+  font-family: 'Comic Sans MS', cursive, '游ゴシック';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  p {
+    font-size: 50px;
+    animation: flashing 3s ease-out infinite;
+  }
+}
+
+@keyframes flashing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#dinosaur {
+  width: 100px;
+  height: 100px;
+  background-size: 100px;
+  animation-name: approach;
+  animation-duration: 10s;
+  animation-delay: 5s;
+}
+
+@keyframes approach {
+  0% {
+    margin-left: 50%;
+  }
+
+  50% {
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+
+  100% {
+    margin-left: 50%;
+  }
+}
+
+#big-dinosaur {
+  animation-name: show-up;
+  display: none;
+  animation-delay: 5s;
+}
+
+@keyframes show-up {
+  0% {
+    display: block;
+  }
+
+  50% {
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+
+  100% {
+    margin-left: 50%;
+  }
+}
+
+canvas {
+  background: #eee;
+  display: block;
+  margin: 0 auto;
+}

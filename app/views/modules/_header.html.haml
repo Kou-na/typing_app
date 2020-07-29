@@ -1,0 +1,27 @@
+%header
+  .Header
+    .Header__logo
+      %h1
+        = link_to 'g', root_path, class: 'Header__logo--g' 
+        = link_to 'r', root_path, class: 'Header__logo--r' 
+        = link_to 'o', root_path, class: 'Header__logo--o' 
+        = link_to 'w', root_path, class: 'Header__logo--w' 
+      = link_to content_tag('h2', 'グロウ'), root_path
+
+    %nav.Header__nav
+      %ul
+        %li
+          = link_to('current_user.name', "#")
+        %li
+          = link_to('ゲームへ！', "#")
+        %li
+          = link_to('文字の登録', "#")
+        %li
+          = link_to('文字の編集', "#")
+        %li
+          = link_to('ログアウト', "#")
+        %li
+          = link_to('ログイン', "#")
+        %li
+          = link_to('新規登録', "#")
+          
