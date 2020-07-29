@@ -18,15 +18,15 @@
             %br
             = f.email_field :email, autofocus: true, autocomplete: "email", value: current_user.email
 
-          .Form__field
-            = f.label "パスワード"
-            %br
-            = f.password_field :password, autocomplete: "new-password"
+          -# .Form__field
+          -#   = f.label "パスワード"
+          -#   %br
+          -#   = f.password_field :password, autocomplete: "new-password"
 
-          .Form__field
-            = f.label "パスワード（確認用）"
-            %br
-            = f.password_field :password_confirmation, autocomplete: "new-password"
+          -# .Form__field
+          -#   = f.label "パスワード（確認用）"
+          -#   %br
+          -#   = f.password_field :password_confirmation, autocomplete: "new-password"
 
           .Form__action
             = f.submit "更新する"

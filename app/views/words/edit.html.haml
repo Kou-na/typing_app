@@ -1,0 +1,36 @@
+.Main
+  .Main__left
+
+  .Main__screen
+
+    .Game-area
+
+      .Game-area__title
+        = link_to(content_tag(:i, ' 戻る', class: 'far fa-arrow-alt-circle-left'), user_path, class: 'Game-area__title--btn')
+        .Game-area__contents
+          %h1
+            編集と削除
+        = link_to(content_tag(:i, ' 削除', class: 'fas fa-trash-alt'), word_path, method: :delete, class: 'Game-area__title--btn')
+
+      .Form
+        = form_with url: word_path, method: :patch, local: true do |f|
+
+          .Form__field
+            = f.label "問題"
+            %br
+            = f.text_field :question, autofocus: true, value: @word.question
+
+          .Form__field
+            = f.label "答え"
+            %br
+            = f.text_field :answer, autofocus: true, value: @word.answer
+
+          .Form__field
+            = f.label "タイピングする文字(アルファベット)"
+            %br
+            = f.text_field :target, autofocus: true, value: @word.target
+            
+          .Form__action
+            = f.submit "更新する"
+      
+  .Main__right

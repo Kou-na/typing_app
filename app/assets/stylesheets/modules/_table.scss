@@ -1,0 +1,33 @@
+.Table {
+  background-color: pink;
+  border-right: none;
+  border-left: none;
+  width: 900px;
+}
+
+table {
+  background-color: white;
+  border: black;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 900px;
+  height: 573px;
+  thead {
+    background-color: lightskyblue;
+    width: calc(100% / 3);
+    padding: 20px;
+  }
+  tbody {
+    display: block;
+    overflow-y: scroll;
+    width: 900px;
+    height: 550px;
+  }
+  tr {
+    border: 1px solid black;
+  }
+  th, td {
+    width: calc(100% / 3);
+    padding: 20px;
+  }
+}
