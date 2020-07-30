@@ -55,6 +55,23 @@ $(function() {
       timer.textContent = 0;
     }
   };
+
+  // カウントダウン用関数
+  function countDown() {
+    cover.textContent = 3;
+    setTimeout(() => {
+      cover.textContent = 2;
+      cover.style.fontSize = '30px';
+    }, 1000);
+    setTimeout(() => {
+      cover.textContent = 1;
+      cover.style.fontSize = '60px';
+    }, 2000);
+    setTimeout(() => {
+      cover.textContent = "Start!!"
+      cover.style.fontSize = '80px';
+    }, 3000);
+  };
   
 
   // ゲームスタート
@@ -64,12 +81,15 @@ $(function() {
     }
 
     if (e.keyCode === 32) {
-      cover.style.display = 'none';
-      isPlaying = true;
-      startTime = Date.now();
-      updateWords(); //問題文の提示
-      updateTimer(); //カウントダウン開始
-      const main = document.getElementsByClassName('Main')
+      countDown();
+      setTimeout(() => {
+        cover.style.display = 'none';
+        isPlaying = true;
+        startTime = Date.now();
+        updateWords(); //問題文の提示
+        updateTimer(); //カウントダウン開始
+        const main = document.getElementsByClassName('Main')
+      }, 4500);
     }
   });
 
