@@ -18,15 +18,24 @@
           問題文がここにきます
         %p#answer
           答えの文がここにきます
-        %p#target
-          タイピングする文がここにきます
+        
       
       #Cover
         %p
-          press the space key to start  
+          press the space key to start
+      #GameOver
+        %p
+          結果発表
+        %p#score
+          成功タイプ数 0
+        %p#miss
+          ミスタイプ数 0
       
-      -# %canvas#maincanvas(width="360" height="200")
-      -#   このブラウザは HTML5 Canvas に対応していません。
+        
+      %canvas#maincanvas(width="900" height="440")
+        このブラウザは HTML5 Canvas に対応していません。
+        %p#target
+          タイピングする文がここにきます
 
   
       
