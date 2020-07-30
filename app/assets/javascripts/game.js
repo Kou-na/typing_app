@@ -32,6 +32,10 @@ $(function() {
   const miss = document.getElementById('miss');
   const dino = document.getElementById('big-dinosaur');
 
+  // 恐竜の位置
+  const rect = dino.getBoundingClientRect();
+  let x = rect.left;
+
   // データ属性を使った、データベースの内容の読み込み（文字列）
   const questions = document.getElementById('questions');
   const answers = document.getElementById('answers');
@@ -73,7 +77,9 @@ $(function() {
       clearTimeout(timeoutId);
       timer.textContent = 0;
       gameOver.style.display = 'block';
-      dino.style.display = 'none';
+      // dino.style.display = 'none';
+      dino.style.zIndex = 20;
+      dino.style.animationName = ('run');
     }
   };
 
@@ -122,12 +128,11 @@ $(function() {
         updateTimer(); //カウントダウン開始
 
         dino.style.display = ('block');
-        dino.style.animationName = ('run');
+        dino.style.animationName = ('sway');
       }, 4500);
     }
   });
 
-  dino.style.transform
 
   // ゲームの内容
   document. addEventListener('keydown', e => {
@@ -137,6 +142,8 @@ $(function() {
 
     if (e.key === array3[currentNum][loc] || e.key.toLowerCase() === array3[currentNum][loc] || e.key.toUpperCase() === array3[currentNum][loc]) {
       loc++;
+      dino.style.animationPlayState = 'running';
+      dino.style.left = `${x += 10}px`
       if (loc === array3[currentNum].length) {
         updateWords();
         loc = 0;
@@ -147,6 +154,7 @@ $(function() {
       console.log(`成功タイプ数: ${scoreCount}`); // コンソーーーーーーーーーーーーーーール
     } else {
       missCount ++
+      dino.style.animationPlayState = 'paused';
       miss.textContent = `ミスタイプ数: ${missCount}`;
       console.log(`miss: ${missCount}`); // コンソーーーーーーーーーーーーーーール
     }
