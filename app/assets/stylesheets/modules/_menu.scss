@@ -1,0 +1,54 @@
+#Menu {
+  z-index: 12;
+  box-sizing: border-box;
+  background-color: rgba(128, 128, 128, 0.7);
+  position: absolute;
+  right: -280px;
+  top: 0px;
+  padding: 20px 30px 30px;
+  width: 280px;
+  height: 100vh;
+  transition: .4s;
+  // display: none;
+  ul {
+    margin-top: 80px;
+  }
+  li {
+    list-style-type: none;
+    padding-bottom: 50px;
+    font-size: 20#{px};
+    letter-spacing: 8px;
+    a {
+      color: #fff;
+      font-weight: bold;
+      &:hover {
+        transition: 0.5s;
+        color: blue;
+      }
+    }
+  }
+}
+
+#show {
+  position: absolute;
+  right: 30px;
+  font-size: 40px;
+  color: #000;
+  cursor: pointer;
+}
+#hide {
+  float: right;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+body.menu-open {
+  overflow-y: hidden;
+}
+body.menu-open #show{
+  display: none;
+}
+body.menu-open #Menu {
+  right: 0px;
+}

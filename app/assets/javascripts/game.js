@@ -1,4 +1,19 @@
 $(function() {
+
+  // メニュー ---------------------------------------------------------------------------------------
+  const show = document.getElementById('show');
+  const hide = document.getElementById('hide');
+
+  show.addEventListener('click', () => {
+    document.body.classList.add('menu-open');
+  });
+  hide.addEventListener('click', () => {
+    document.body.classList.remove('menu-open');
+  });
+
+
+
+  // ゲーム -------------------------------------------------------------------------------------------
   let loc = 0;
   let scoreCount = 0;
   let missCount = 0;
@@ -65,13 +80,14 @@ $(function() {
   // カウントダウン用関数
   function countDown() {
     cover.textContent = 3;
+    cover.style.fontSize = '20px';
     setTimeout(() => {
       cover.textContent = 2;
-      cover.style.fontSize = '30px';
+      cover.style.fontSize = '50px';
     }, 1000);
     setTimeout(() => {
       cover.textContent = 1;
-      cover.style.fontSize = '60px';
+      cover.style.fontSize = '70px';
     }, 2000);
     setTimeout(() => {
       cover.textContent = "Start!!"
@@ -110,6 +126,8 @@ $(function() {
       }, 4500);
     }
   });
+
+  dino.style.transform
 
   // ゲームの内容
   document. addEventListener('keydown', e => {
