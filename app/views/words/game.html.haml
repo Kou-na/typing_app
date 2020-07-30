@@ -2,9 +2,6 @@
   .Main__left
 
   .Main__screen
-    .Top
-      .Top__logo
-
     .Game-area
       .Game-area__time
         %p
@@ -31,7 +28,8 @@
         %p#miss
           ミスタイプ数 0
       
-        
+      = image_tag "kyoryu-migimuki.png", alt: "恐竜の画像", id: "big-dinosaur"
+           
       %canvas#maincanvas(width="900" height="440")
         このブラウザは HTML5 Canvas に対応していません。
         %p#target

@@ -86,6 +86,9 @@
   align-items: center;
   flex-direction: column;
   display: none;
+  p {
+    text-align: center;
+  }
 }
 
 @keyframes flashing {
@@ -125,30 +128,30 @@
 }
 
 #big-dinosaur {
-  animation-name: show-up;
   display: none;
-  animation-delay: 5s;
+  position: absolute;
+  animation-duration: 5s;
+  animation-timing-function: steps(10, start);
 }
 
-@keyframes show-up {
+@keyframes run {
   0% {
-    display: block;
+    transform:translateX(-1000px) translateY(20px) rotate(10deg);
   }
 
   50% {
-    margin-left: 0%;
-    margin-top: 5%;
+    transform:translateX(1000px) translateY(20px) rotate(-10deg);
   }
 
   100% {
-    margin-left: 50%;
+    transform:translateX(-100px) translateY(20px) rotate(-10deg);
   }
 }
 
 canvas {
-  // background: pink;
   background-color: #bbe2f1;
   top: 80;
   display: inline-block;
   margin: 0 auto;
+  cursor: none;
 }
