@@ -104,6 +104,7 @@ input, select {
 // ///////////////////////////////////// plus
 * {
   user-select: none;
+  box-sizing: border-box;
 }
 
 body {

@@ -1,22 +1,7 @@
-.Main {
-  width: 100vw;
-  height: 80vh;
-  display: flex;
-  &__left {
-    width: calc((100vw - 900px) / 2);
-    background-color: #fff3b8;
-  }
-  &__screen {
-    background-color: #000;
-    border-right: 4px solid #fff;
-    border-left: 4px solid #fff;
-    width: 900px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &__right {
-    width: calc((100vw - 900px) / 2);
-    background-color: #fff3b8;
-  }
+@import "variable";
+
+.Main__screen {
+  background-color: #000;
+  @extend .center-screen;
+  @extend .flex-center;
 }

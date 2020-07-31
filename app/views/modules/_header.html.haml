@@ -18,13 +18,12 @@
             = link_to('ログイン', new_user_session_path)
           %li
             = link_to('新規登録', new_user_registration_path)
-            
 
-#Menu
-  #hide
-    = icon('fas', 'times')
-  %ul
-    - if user_signed_in?
+- if user_signed_in?
+  #Menu
+    #hide
+      = icon('fas', 'times')
+    %ul
       %li
         = link_to(current_user.name, edit_user_path(current_user))
       %li
@@ -32,6 +31,6 @@
       %li
         = link_to('文字の登録', new_word_path)
       %li
-        = link_to('文字の編集', user_path(current_user.id))
+        = link_to('文字の一覧', user_path(current_user.id))
       %li
         = link_to('ログアウト', destroy_user_session_path, method: :delete)

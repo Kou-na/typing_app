@@ -17,7 +17,7 @@ $(function() {
   let loc = 0;
   let scoreCount = 0;
   let missCount = 0;
-  let timeLimit = 60 * 1000;
+  let timeLimit = 6 * 1000;
   let startTime;
   let isPlaying = false;
   
@@ -30,10 +30,14 @@ $(function() {
   const gameOver = document.getElementById('GameOver');
   const score = document.getElementById('score');
   const miss = document.getElementById('miss');
-  const dino = document.getElementById('big-dinosaur');
+
+  const sDino = document.getElementById('small-dinosaur');
+  const mDino = document.getElementById('middle-dinosaur');
+  const bDino = document.getElementById('big-dinosaur');
+  const runningDino = document.getElementById('running-dinosaur');
 
   // 恐竜の位置
-  const rect = dino.getBoundingClientRect();
+  const rect = sDino.getBoundingClientRect();
   let x = rect.left;
 
   // データ属性を使った、データベースの内容の読み込み（文字列）
@@ -77,27 +81,27 @@ $(function() {
       clearTimeout(timeoutId);
       timer.textContent = 0;
       gameOver.style.display = 'block';
-      // dino.style.display = 'none';
-      dino.style.zIndex = 20;
-      dino.style.animationName = ('run');
+      sDino.style.display = 'none';
+      runningDino.style.display = ('block');
+      runningDino.style.zIndex = 20;
     }
   };
 
   // カウントダウン用関数
   function countDown() {
     cover.textContent = 3;
-    cover.style.fontSize = '20px';
+    cover.style.fontSize = '40px';
     setTimeout(() => {
       cover.textContent = 2;
-      cover.style.fontSize = '50px';
+      cover.style.fontSize = '60px';
     }, 1000);
     setTimeout(() => {
       cover.textContent = 1;
-      cover.style.fontSize = '70px';
+      cover.style.fontSize = '90px';
     }, 2000);
     setTimeout(() => {
       cover.textContent = "Start!!"
-      cover.style.fontSize = '80px';
+      cover.style.fontSize = '100px';
     }, 3000);
   };
 
@@ -127,8 +131,8 @@ $(function() {
         updateWords(); //問題文の提示
         updateTimer(); //カウントダウン開始
 
-        dino.style.display = ('block');
-        dino.style.animationName = ('sway');
+        sDino.style.display = ('block');
+        sDino.style.animationName = ('sway');
       }, 4500);
     }
   });
@@ -142,21 +146,19 @@ $(function() {
 
     if (e.key === array3[currentNum][loc] || e.key.toLowerCase() === array3[currentNum][loc] || e.key.toUpperCase() === array3[currentNum][loc]) {
       loc++;
-      dino.style.animationPlayState = 'running';
-      dino.style.left = `${x += 10}px`
+      sDino.style.animationPlayState = 'running';
+      sDino.style.left = `${x += 10}px`
       if (loc === array3[currentNum].length) {
         updateWords();
         loc = 0;
       }
       updateTarget();
       scoreCount++;
-      score.textContent = `成功タイプ数: ${scoreCount}`;
-      console.log(`成功タイプ数: ${scoreCount}`); // コンソーーーーーーーーーーーーーーール
+      score.textContent = scoreCount;
     } else {
       missCount ++
-      dino.style.animationPlayState = 'paused';
-      miss.textContent = `ミスタイプ数: ${missCount}`;
-      console.log(`miss: ${missCount}`); // コンソーーーーーーーーーーーーーーール
+      sDino.style.animationPlayState = 'paused';
+      miss.textContent = missCount;
     }
   });
 

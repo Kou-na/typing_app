@@ -1,11 +1,13 @@
 .Main
-  .Main__left
-
-  .Main__screen
+  .User-part
+  
+    .Page-title__contents
+      %h1
+        文字の一覧
     .Table
       %table
         %thead
-          %tr
+          %tr.table-head
             %th
               質問
             %th
@@ -13,7 +15,7 @@
             %th
               打つ文字
       %table
-        %tbody
+        %tbody.table-body
           - @words.each do |word|
             %tr
               %td
@@ -22,6 +24,3 @@
                 = link_to word.answer, edit_word_path(word.id)
               %td
                 = link_to word.target, edit_word_path(word.id)
-
-  .Main__right
-    %br

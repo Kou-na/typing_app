@@ -1,7 +1,6 @@
 .Main
-  .Main__left
-
   .Main__screen
+
     .Game-area
       .Game-area__time
         %p
@@ -16,30 +15,43 @@
         %p#answer
           答えの文がここにきます
         
+      %canvas#maincanvas(width="900" height="400")
+        このブラウザは HTML5 Canvas に対応していません。
+        %p#target
+          タイピングする文がここにきます
       
       #Cover
         %p
           press the space key to start
 
       #GameOver
-        %p
-          結果発表
-        %p#score
-          成功タイプ数 0
-        %p#miss
-          ミスタイプ数 0
+        .Game-result
+          %h1
+            結果発表
+          .Game-result__count
+            %p
+              成功タイプ数 
+            %span#score
+              0
+          .Game-result__count
+            %p
+              ミスタイプ数
+            %span#miss
+              0
+          = link_to('もういっかい', game_path, class: "Game-result__replay")
       
-      = image_tag "kyoryu-migimuki.png", alt: "恐竜の画像", id: "big-dinosaur"
-           
-      %canvas#maincanvas(width="900" height="400")
-        このブラウザは HTML5 Canvas に対応していません。
-        %p#target
-          タイピングする文がここにきます
 
-  
+      .Dino
+        = image_tag "kyoryu-migimuki.png", alt: "恐竜の画像", id: "small-dinosaur"
+      .Dino
+        = image_tag "kyoryu-migimuki.png", alt: "恐竜の画像", id: "middle-dinosaur"
+      .Dino
+        = image_tag "kyoryu-migimuki.png", alt: "恐竜の画像", id: "big-dinosaur"
+      .running-dinosaur
+        = image_tag "kyoryu-migimuki.png", alt: "恐竜の画像", id: "running-dinosaur"
+           
       
-      
-  .Main__right
-    = content_tag :div, "", id: "questions", data: { questions: @questions }
-    = content_tag :div, "", id: "answers", data: { answers: @answers }
-    = content_tag :div, "", id: "targets", data: { targets: @targets }
+
+= content_tag :div, "", id: "questions", data: { questions: @questions }
+= content_tag :div, "", id: "answers", data: { answers: @answers }
+= content_tag :div, "", id: "targets", data: { targets: @targets }

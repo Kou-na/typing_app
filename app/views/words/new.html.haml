@@ -1,32 +1,27 @@
 .Main
-  .Main__left
+  .User-part
+  
+    .Page-title__contents
+      %h1
+        文字の登録
 
-  .Main__screen
+    .Form
+      = form_with url: words_path, method: :post, local: true do |f|
 
-    .Game-area
-      .Game-area__contents
-        %h1
-          新規作成
+        .Form__field
+          = f.label "問題"
+          %br
+          = f.text_field :question, autofocus: true
 
-      .Form
-        = form_with url: words_path, method: :post, local: true do |f|
+        .Form__field
+          = f.label "答え"
+          %br
+          = f.text_field :answer, autofocus: true
 
-          .Form__field
-            = f.label "問題"
-            %br
-            = f.text_field :question, autofocus: true
-
-          .Form__field
-            = f.label "答え"
-            %br
-            = f.text_field :answer, autofocus: true
-
-          .Form__field
-            = f.label "タイピングする文字(アルファベット)"
-            %br
-            = f.text_field :target, autofocus: true
-            
-          .Form__action
-            = f.submit "登録する"
-      
-  .Main__right
+        .Form__field
+          = f.label "タイピングする文字(アルファベット)"
+          %br
+          = f.text_field :target, autofocus: true
+          
+        .Form__action
+          = f.submit "登録する"

@@ -43,13 +43,10 @@
   left: 10px;
   bottom: 0;
 
-  animation-duration: 5s;
-  animation-name: rollin;
-  animation-iteration-count: infinite;
-  animation-iteration-count: inherit;
+  animation: rollin 10s infinite;
 }
 
 @keyframes rollin {
-  from { margin-left: 80%; }
-  to { margin-left: 0%; }
+  from { margin-left: 150%; }
+  to { margin-left: -150%; }
 }

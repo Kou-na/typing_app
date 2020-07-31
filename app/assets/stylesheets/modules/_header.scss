@@ -1,7 +1,9 @@
+@import "variable";
+
 .Header {
-  font-family: 'Comic Sans MS', cursive, '游ゴシック';
-  background-color: #fff;
-  border-bottom: 2px dotted #ea5550;
+  font-family: $main-font;
+  background-color: $white;
+  border-bottom: $dot-border;
   padding: 0 20px;
   height: 10vh;
   display: flex;
@@ -13,41 +15,32 @@
       align-items: center;
       font-size: 50px;
     }
-    &--g {
-      color: #9cbb1c;
-    }
-    
-    &--r {
-      color: #ffdc00;
-    }
-    
-    &--o {
-      color: #d83473;
-    }
-    
-    &--w {
-      color: #f39800;
-    }
+    &--g { color: $green; }
+    &--r { color: $yellow; } 
+    &--o { color: $red; } 
+    &--w { color: $orange; }
 
     h2 {
       font-size: 10px;
       text-align: center;
-      color: #000;
+      color: $black;
     }
   }
 
   &__nav {
-    ul {
-      width: 700px;
+    & > ul {
+      margin-right: 15px;
+      width: 230px;
       height: 10vh;
       list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      & a {
+      a {
+        letter-spacing: 5px;
         &:hover {
-          transition: 0.2s;
-          color: pink;
+            transition: 0.2s;
+            color: pink;
         }
       }
     }
