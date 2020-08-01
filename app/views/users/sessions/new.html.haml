@@ -23,4 +23,4 @@
         .Form__action
           = f.submit "ログイン"
 
-      -# = render "users/shared/links"
+    .User-path= link_to('未登録の方はこちら', new_user_registration_path)

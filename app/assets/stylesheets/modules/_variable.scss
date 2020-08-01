@@ -56,9 +56,14 @@ $light-blue: #bbe2f1;
     letter-spacing: 10px;
     font-size: 25px;
   }
-  &--btn {
+  &__btn {
     display: inline-block;
     margin: 0 50px;
     font-size: 18px;
+    &--question {
+      margin: 10px 60px 0;
+      font-size: 25px;
+      cursor: pointer;
+    }
   }
 }

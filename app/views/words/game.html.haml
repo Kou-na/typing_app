@@ -3,12 +3,6 @@
 
     .Game-area
       .Game-area__time
-        %p
-          残り 
-        %p#timer
-          60
-        %p
-          秒
       .Game-area__contents
         %p#question
           問題文がここにきます
@@ -17,6 +11,8 @@
         
       %canvas#maincanvas(width="900" height="400")
         このブラウザは HTML5 Canvas に対応していません。
+        %p#timer
+          60
         %p#target
           タイピングする文がここにきます
       
@@ -49,6 +45,8 @@
         = image_tag "kyoryu-migimuki.png", alt: "恐竜の画像", id: "big-dinosaur"
       .running-dinosaur
         = image_tag "kyoryu-migimuki.png", alt: "恐竜の画像", id: "running-dinosaur"
+      .running-dinosaur2
+        = image_tag "kyoryu.png", alt: "恐竜の画像", id: "running-dinosaur2"
            
       
 

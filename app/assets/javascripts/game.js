@@ -181,7 +181,8 @@ $(function() {
     ctx.fillText(`残り${timer.textContent}秒`, 80, 90);
 
     ctx.font = "48px Comic Sans MS";      // 表示文字の設定
-    ctx.fillText(target.textContent, 100, 160);
+    let textWidth = ctx.measureText(target.textContent).width;
+    ctx.fillText(target.textContent, (900 - textWidth) / 2, 180);
 
     window.requestAnimationFrame(update);        // 再描画
   }

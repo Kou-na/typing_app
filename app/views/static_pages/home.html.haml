@@ -23,6 +23,9 @@
           .Main-title
             Typing
 
-          = link_to('PLAY', game_path(current_user.id), class: "Static-area__btn")
+          - if @word.present?
+            = link_to('PLAY', game_path(current_user.id), class: "Static-area__btn")
+          - else
+            = link_to('PLAY', new_word_path, class: "Static-area__btn")
             
         .Ball

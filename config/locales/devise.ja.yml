@@ -1,6 +1,10 @@
 ja:
   activerecord:
     attributes:
+      word:
+        question: 問題となる文
+        answer: 問題の答え
+        target: 打つ文字
       user:
         confirmation_sent_at: パスワード確認送信時刻
         confirmation_token: パスワード確認用トークン

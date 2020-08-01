@@ -24,6 +24,7 @@ canvas {
   display: inline-block;
   margin: 0 auto;
   cursor: none;
+  text-align: center;
 }
 
 #Cover {
@@ -132,9 +133,18 @@ canvas {
   bottom: 400px;
   left: -800px;
   animation-name: run;
-  animation-duration: 5s;
+  animation-duration: 15s;
   animation-timing-function: steps(10, start);
   animation-iteration-count: infinite;
 }
 
-
+#running-dinosaur2 {
+  display: none;
+  position: relative;
+  bottom: 400px;
+  left: -800px;
+  animation-name: run-reverse;
+  animation-duration: 5s;
+  animation-timing-function: steps(10, start);
+  animation-iteration-count: infinite;
+}

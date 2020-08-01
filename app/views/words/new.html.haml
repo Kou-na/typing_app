@@ -1,25 +1,34 @@
 .Main
   .User-part
   
-    .Page-title__contents
-      %h1
-        文字の登録
+    .Page-title
+      = link_to(content_tag(:i, ' 戻る', class: 'far fa-arrow-alt-circle-left'), root_path, class: 'Page-title__btn')
+      .Page-title__contents
+        %h1
+          文字の登録
+      = icon('far', 'question-circle', class: 'Page-title__btn--question')
 
     .Form
       = form_with url: words_path, method: :post, local: true do |f|
 
         .Form__field
           = f.label "問題"
+          -if @word.errors.any? 
+            %span.Form__error=@word.errors.full_messages_for(:question).first
           %br
           = f.text_field :question, autofocus: true
 
         .Form__field
           = f.label "答え"
+          -if @word.errors.any? 
+            %span.Form__error=@word.errors.full_messages_for(:answer).first
           %br
           = f.text_field :answer, autofocus: true
 
         .Form__field
-          = f.label "タイピングする文字(アルファベット)"
+          = f.label "タイピング用(アルファベット)"
+          -if @word.errors.any? 
+            %span.Form__error=@word.errors.full_messages_for(:target).first
           %br
           = f.text_field :target, autofocus: true
           

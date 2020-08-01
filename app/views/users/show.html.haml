@@ -1,9 +1,12 @@
 .Main
   .User-part
   
-    .Page-title__contents
-      %h1
-        文字の一覧
+    .Page-title
+      = link_to(content_tag(:i, ' 戻る', class: 'far fa-arrow-alt-circle-left'), root_path, class: 'Page-title__btn')
+      .Page-title__contents
+        %h1
+          文字の一覧
+      = icon('far', 'question-circle', class: 'Page-title__btn--question')
     .Table
       %table
         %thead

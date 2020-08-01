@@ -3,12 +3,7 @@
   @extend .flex-center;
 
   &__field > input {
-    margin: 10px 0 20px;
-    padding: 0 15px;
-    width: 500px;
-    height: 50px;
-    font-size: 20px;
-    letter-spacing: 4px;
+    @extend .input_field;
   }
   &__action > input {
     float: right;
@@ -33,4 +28,24 @@
       top: 3px;
     }
   }
+}
+
+.field_with_errors > input {
+  @extend .input_field;
+}
+
+.input_field {
+  margin: 10px 0 20px;
+  padding: 0 15px;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+.Form__error {
+  display: inline-block;
+  float: right;
+  margin-left: 50px;
+  color: red;
 }

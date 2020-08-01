@@ -2,11 +2,11 @@
   .User-part
 
     .Page-title
-      = link_to(content_tag(:i, ' 戻る', class: 'far fa-arrow-alt-circle-left'), user_path, class: 'Page-title--btn')
+      = link_to(content_tag(:i, ' 戻る', class: 'far fa-arrow-alt-circle-left'), user_path, class: 'Page-title__btn')
       .Page-title__contents
         %h1
           文字の編集
-      = link_to(content_tag(:i, ' 削除', class: 'fas fa-trash-alt'), word_path, method: :delete, class: 'Page-title--btn')
+      = link_to(content_tag(:i, ' 削除', class: 'fas fa-trash-alt'), word_path, method: :delete, class: 'Page-title__btn')
 
     .Form
       = form_with url: word_path, method: :patch, local: true do |f|

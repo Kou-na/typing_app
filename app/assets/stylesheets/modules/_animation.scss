@@ -22,6 +22,15 @@
   }
 }
 
+@keyframes run-reverse {
+  0% {
+    transform:translateX(1000px) translateY(20px) rotate(10deg);
+  }
+  100% {
+    transform:translateX(-1000px) translateY(20px) rotate(-10deg);
+  }
+}
+
 @keyframes sway {
   0% {
     transform: rotate(3deg);
