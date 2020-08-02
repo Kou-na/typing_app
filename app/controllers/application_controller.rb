@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
@@ -9,6 +8,8 @@ class ApplicationController < ActionController::Base
   end
 
   def set_current_users_word
-    @current_users_word = Word.find_by(user_id: current_user.id)
+    if user_signed_in?
+      @current_users_word = Word.find_by(user_id: current_user.id)
+    end
   end
 end

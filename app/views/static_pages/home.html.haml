@@ -23,9 +23,12 @@
           .Main-title
             Typing
 
-          - if @current_users_word .present?
-            = link_to('PLAY', game_path(current_user.id), class: "Static-area__btn")
+          - if user_signed_in?
+            - if @current_users_word .present?
+              = link_to('PLAY', game_path(current_user.id), class: "Static-area__btn")
+            - else
+              = link_to('PLAY', new_word_path, class: "Static-area__btn")
           - else
-            = link_to('PLAY', new_word_path, class: "Static-area__btn")
+            = link_to('PLAY', top_path, class: "Static-area__btn")
             
         .Ball

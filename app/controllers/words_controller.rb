@@ -1,4 +1,5 @@
 class WordsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_current_users_word
 
   def game

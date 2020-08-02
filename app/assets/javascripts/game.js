@@ -1,15 +1,22 @@
 $(function() {
 
   // メニュー ---------------------------------------------------------------------------------------
-  const show = document.getElementById('show');
-  const hide = document.getElementById('hide');
-
-  show.addEventListener('click', () => {
-    document.body.classList.add('menu-open');
-  });
-  hide.addEventListener('click', () => {
-    document.body.classList.remove('menu-open');
-  });
+  function menuButton() {
+    if (document.getElementById('show')) {
+      const show = document.getElementById('show');
+      const hide = document.getElementById('hide');
+    
+      show.addEventListener('click', () => {
+        document.body.classList.add('menu-open');
+      });
+      hide.addEventListener('click', () => {
+        document.body.classList.remove('menu-open');
+      });
+    } else {
+      return;
+    }
+  };
+  menuButton();
 
 
 
