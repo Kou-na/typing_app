@@ -1,7 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+DefaultWord.create!(question: "鼻の長い動物といえば？", answer: "ぞう", target: "elephant")
+DefaultWord.create!(question: "首の長い動物といえば？", answer: "きりん", target: "giraffe")
+DefaultWord.create!(question: "白と黒のしましま模様の動物といえば？", answer: "シマウマ", target: "zebra")
+DefaultWord.create!(question: "パンジーの和名は？", answer: "さんしきすみれ", target: "sannsikisumire")
+DefaultWord.create!(question: "為せば成る、為さねばならぬ何事も、", answer: "成らぬは人の", target: "nasanunarikeri")
+DefaultWord.create!(question: "春はあけぼの で始まる随筆は？", answer: "枕草子", target: "makuranosousi")
+DefaultWord.create!(question: "源氏物語の作者は？", answer: "紫式部", target: "murasakisikibu")
