@@ -126,6 +126,7 @@ $(function() {
       countDown();
       setTimeout(() => {
         cover.style.display = 'none';
+        gameOver.style.display = 'none';
         isPlaying = true;
         startTime = Date.now();
         updateWords(); //問題文の提示

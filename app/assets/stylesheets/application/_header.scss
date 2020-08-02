@@ -1,4 +1,4 @@
-@import "variable";
+@import "modules/variable";
 
 .Header {
   font-family: $main-font;
@@ -11,13 +11,12 @@
 
   &__logo {
     h1 {
-      display: flex;
-      align-items: center;
+      @extend .flex-center;
       font-size: 50px;
     }
     &--g { color: $green; }
     &--r { color: $yellow; } 
-    &--o { color: $red; } 
+    &--o { color: $pink; } 
     &--w { color: $orange; }
 
     h2 {

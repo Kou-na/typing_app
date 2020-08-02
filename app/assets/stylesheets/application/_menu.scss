@@ -1,5 +1,7 @@
+@import "modules/variable";
+
 #Menu {
-  z-index: 12;
+  z-index: 100;
   box-sizing: border-box;
   background-color: rgba(128, 128, 128, 0.7);
   position: absolute;
@@ -8,8 +10,7 @@
   padding: 20px 30px 30px;
   width: 280px;
   height: 100vh;
-  transition: .4s;
-  // display: none;
+  transition: 0.4s;
   ul {
     margin-top: 80px;
   }
@@ -23,7 +24,7 @@
       font-weight: bold;
       &:hover {
         transition: 0.5s;
-        color: deeppink;
+        color: $pink;
       }
     }
   }
@@ -39,7 +40,7 @@
 #hide {
   float: right;
   font-size: 40px;
-  color: #fff;
+  color: $white;
   cursor: pointer;
 }
 

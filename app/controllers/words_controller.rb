@@ -1,4 +1,5 @@
 class WordsController < ApplicationController
+  before_action :set_current_users_word
 
   def game
     @questions = current_user.words.select(:question).pluck(:question)

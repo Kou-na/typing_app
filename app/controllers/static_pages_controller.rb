@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
+  before_action :set_current_users_word
+  
   def home
-    @word = Word.find_by(user_id: current_user.id)
   end
 end

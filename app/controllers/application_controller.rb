@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
+
+  def set_current_users_word
+    @current_users_word = Word.find_by(user_id: current_user.id)
+  end
 end

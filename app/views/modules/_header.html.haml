@@ -27,7 +27,10 @@
       %li
         = link_to(current_user.name, edit_user_path(current_user))
       %li
-        = link_to('ゲームへ！', game_path(current_user.id))
+        - if @current_users_word .present?
+          = link_to('ゲームへ！', game_path(current_user.id))
+        - else
+          = link_to('ゲームへ！', new_word_path)
       %li
         = link_to('文字の登録', new_word_path)
       %li

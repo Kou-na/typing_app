@@ -1,4 +1,4 @@
-@import "variable";
+@import "modules/variable";
 
 .User-part {
   background-color: $light-blue;
@@ -17,6 +17,6 @@
   font-size: 18px;
   font-weight: bold;
   & a:hover {
-    color: $red;
+    color: $pink;
   }
 }

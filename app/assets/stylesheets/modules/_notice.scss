@@ -1,4 +1,5 @@
 @import "variable";
+@import "animation";
 
 #Notice {
   z-index: 20;
@@ -18,16 +19,4 @@
   animation-name: flash;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-}
-
-@keyframes flash {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }

@@ -1,3 +1,27 @@
+@keyframes rollin {
+  0% {
+    margin-left: 150%;
+  }
+  30% {
+    margin-left: 150%;
+  }
+  100% {
+    margin-left: -150%;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes flashing {
   0% {
     opacity: 0;

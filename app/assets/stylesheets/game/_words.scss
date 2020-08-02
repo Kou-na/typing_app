@@ -1,7 +1,6 @@
-@import "variable";
+@import "modules/variable";
 
 .Main__screen {
-  background-color: #000;
   @extend .center-screen;
   @extend .flex-center;
 }

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_current_users_word
 
   def show
     @words = current_user.words

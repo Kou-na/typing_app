@@ -1,5 +1,5 @@
-@import "variable";
-@import "animation";
+@import "modules/variable";
+@import "modules/animation";
 
 .Game-area {
   background-color: $light-blue;
@@ -28,7 +28,7 @@ canvas {
 }
 
 #Cover {
-  z-index: 10;
+  z-index: 20;
   @extend .Main;
   @extend .flex-center;
   font-family: $main-font;
@@ -74,8 +74,8 @@ canvas {
       justify-content: space-between;
     }
     &__replay {
-      background-color: $red;
-      border: 1px solid $red;
+      background-color: $pink;
+      border: 1px solid $pink;
       border-radius: 5px;
       padding: 5px 10px;
       position: relative;

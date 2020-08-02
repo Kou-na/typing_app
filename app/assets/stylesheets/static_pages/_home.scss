@@ -1,3 +1,5 @@
+@import "modules/animation";
+
 .Static-area {
   font-family: 'Comic Sans MS', cursive, '游ゴシック';
   background-color: #fff;
@@ -44,9 +46,4 @@
   bottom: 0;
 
   animation: rollin 10s infinite;
-}
-
-@keyframes rollin {
-  from { margin-left: 150%; }
-  to { margin-left: -150%; }
 }
