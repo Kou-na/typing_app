@@ -67,3 +67,26 @@ $light-blue: #bbe2f1;
     }
   }
 }
+
+.help {
+  display: none;
+  background-color: $white;
+  border: 3px solid $pink;
+  border-radius: 10px;
+  position: absolute;
+  top: 15vh;
+  right: 5vw;
+  padding: 30px 18px;
+  width: 230px;
+  line-height: 20px;
+  & > ul > li{
+    display: block;
+  }
+  .caution {
+    padding-top: 15px;
+    color: red;
+  } 
+}
+.help-icon:hover > .help {
+  display: block;
+}

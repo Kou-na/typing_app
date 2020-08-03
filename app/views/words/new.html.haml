@@ -6,7 +6,15 @@
       .Page-title__contents
         %h1
           文字の登録
-      = icon('far', 'question-circle', class: 'Page-title__btn--question')
+      .help-icon
+        = icon('far', 'question-circle', class: 'Page-title__btn--question')
+        .help
+          %p タイピング用の文字には
+          %br ・半角英数字
+          %br ・! ?
+          %br ・空欄（1マス）
+          %br が入力できます。
+          %p.caution 全て18文字までです！
 
     .Form
       = form_with url: words_path, method: :post, local: true do |f|
