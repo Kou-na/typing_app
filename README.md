@@ -12,7 +12,7 @@ grow typing
 
 実際の操作画面のキャプチャはREADME下部にございます。
 
-また、HEROKUを利用してデプロイしたものはこちらからお願いいたします。　< https://grow-typing.herokuapp.com/ > 開くまでにお時間がかかる場合があります。
+また、HEROKUを利用してデプロイしたものはこちらからお願いいたします。　< https://grow-typing.herokuapp.com/ > 開くまでにお時間がかかる場合がございます。
 
 
 
