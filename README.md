@@ -66,6 +66,7 @@ grow typing
 
 ### ゲームの画面です
 問題とその答えが上部に表示され、中央に実際に打つアルファベットが表示されます
+
 正解の文字を打つと恐竜が左から右へ動きます
 <img width="1440" alt="game" src="https://user-images.githubusercontent.com/64447481/90992468-e4aef280-e5ea-11ea-8c39-e5fce843660a.png">
 
